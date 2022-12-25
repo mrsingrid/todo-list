@@ -5,6 +5,7 @@ import { CheckCircle, Circle, PlusCircle
 } from "phosphor-react";
 import { Header } from './components/Header';
 import { InputNewTask } from './components/InputNewTask';
+import { ToDoList } from './components/ToDoList';
 
 export function App() {
 
@@ -13,19 +14,7 @@ export function App() {
       <Header />
       <InputNewTask />
 
-      <div>
-        <p>Tarefas criadas</p>
-        <span>
-          5
-        </span>
-      </div>
-
-      <div>
-        <p>Concluídas</p>
-        <span>
-          2 de 5
-        </span>
-      </div>
+      <ToDoList />
 
       <ul>
         <li><Circle /> Meditar</li>
