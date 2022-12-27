@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const ToDoListContainer = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   padding-top: 4rem;
   justify-content: center;
+  align-items: center;
 `
 
 export const TaskCounterContainer = styled.div`
@@ -34,4 +36,29 @@ export const TaskCounter = styled.div`
   background: ${props => props.theme['gray-400']};
   font-size: 0.75rem;
   font-weight: 700;
+`
+
+export const MessageNoResultsContainer = styled.div`
+  width: 45rem;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 1rem;
+  color: ${props => props.theme['gray-300']};
+  border-top: 1px solid ${props => props.theme['gray-400']}
+`
+
+export const MessageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`
+
+export const Text = styled.p`
+  font-weight: bold;
+`
+
+export const Description = styled.span`
 `

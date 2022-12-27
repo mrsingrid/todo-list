@@ -1,7 +1,12 @@
+import { ClipboardText } from 'phosphor-react';
 import { TaskCounterTitle, TaskCounterContainer, 
   ToDoListContainer, 
   TaskCounter,
-  TaskCounterContent} from './styles';
+  TaskCounterContent,
+  MessageNoResultsContainer,
+  MessageContainer,
+  Description,
+  Text} from './styles';
 
 export function ToDoList() {
   return (
@@ -25,6 +30,17 @@ export function ToDoList() {
           </TaskCounter>
         </TaskCounterContent>
       </TaskCounterContainer>
+
+      {
+        <MessageNoResultsContainer>
+          <ClipboardText size={56} />
+          <MessageContainer>
+            <Text>Você ainda não tem tarefas cadastradas</Text>
+            <Description>Crie tarefas e organize seus itens a fazer</Description>
+          </MessageContainer>
+          
+        </MessageNoResultsContainer>
+      }
     </ToDoListContainer>
   )
 }
