@@ -62,3 +62,9 @@ export const Text = styled.p`
 
 export const Description = styled.span`
 `
+
+export const List = styled.ul`
+  display: flex;
+`;
+
+export const Item = styled.li``;
