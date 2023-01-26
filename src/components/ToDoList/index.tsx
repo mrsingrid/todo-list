@@ -1,4 +1,4 @@
-import { ClipboardText } from 'phosphor-react';
+import { ClipboardText, Trash } from 'phosphor-react';
 import { Task } from '../../types/task';
 import { TaskCounterTitle, TaskCounterContainer, 
   ToDoListContainer, 
@@ -9,7 +9,10 @@ import { TaskCounterTitle, TaskCounterContainer,
   Description,
   Text,
   List,
-  Item} from './styles';
+  Item,
+  StatusTaskButton,
+  RemoveButtonContainer,
+  TaskDescription} from './styles';
 
   interface TodoListProps {
     tasks: Task[];
@@ -17,7 +20,7 @@ import { TaskCounterTitle, TaskCounterContainer,
 
   export function ToDoList({ tasks }: TodoListProps) {
 
-  const finishedTasks = tasks.filter(task => task.status === 'finished').length;
+  const finishedTasks = tasks.filter(task => task.inProgress === false).length;
 
   return (
     <ToDoListContainer>
@@ -58,7 +61,11 @@ import { TaskCounterTitle, TaskCounterContainer,
           {
             tasks.map(task => (
               <Item key={task.name}>
-                {task.name}
+                <StatusTaskButton />
+                <TaskDescription>{task.name}</TaskDescription>
+                <RemoveButtonContainer>
+                  <Trash size={16} />
+                </RemoveButtonContainer>
               </Item>
             ))
           }

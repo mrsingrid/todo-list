@@ -47,7 +47,7 @@ export const MessageNoResultsContainer = styled.div`
   padding: 4rem;
   gap: 1rem;
   color: ${props => props.theme['gray-300']};
-  border-top: 1px solid ${props => props.theme['gray-400']}
+  border-top: 1px solid ${props => props.theme['gray-400']};
 `
 
 export const MessageContainer = styled.div`
@@ -64,7 +64,42 @@ export const Description = styled.span`
 `
 
 export const List = styled.ul`
-  display: flex;
+  list-style: none;
+  width: 46rem;
+  text-align: left;
 `;
 
-export const Item = styled.li``;
+export const Item = styled.li`
+  padding: 1rem;
+  background: ${props => props.theme['gray-500']};
+  margin-bottom: 0.75rem;
+  border: 1px solid ${props => props.theme['gray-400']};
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  display: flex;
+  gap: 0.75rem;
+`;
+
+export const StatusTaskButton = styled.button`
+  background: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid ${props => props.theme.blue};
+  cursor: pointer;
+`
+
+export const RemoveButtonContainer = styled.div`
+  display: flex;
+`
+
+export const RemoveTaskButton = styled.button`
+
+`
+
+export const TaskDescription = styled.span`
+  font-size: 0.875rem;
+  display: flex;
+  flex-grow: 1;
+
+`
